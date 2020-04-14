@@ -36,7 +36,7 @@ inline int is_prime(long int & number){
 
     long int last = static_cast<long int>(sqrt(number));
 
-    for (long int i = 5; i < last; i+=6) {
+    for (long int i = 5; i <= last; i+=6) {
         if (number % i == 0 || (number % (i + 2) == 0))
             return 0;
     }
