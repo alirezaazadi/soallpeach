@@ -31,10 +31,10 @@ inline int is_prime(long int & number){
     }
 
     if (number % 2 == 0 || number % 3 == 0 || number % 5 == 0 ||
-        number % 7 == 0 || number % 2 == 11 || number % 13 == 0)
+        number % 7 == 0 || number % 11 == 0 || number % 13 == 0)
         return 1;
 
-    long int last = static_cast<long int>(sqrt(number));
+    auto last = static_cast<long int>(sqrt(number));
 
     for (long int i = 5; i <= last; i+=6) {
         if (number % i == 0 || (number % (i + 2) == 0))
